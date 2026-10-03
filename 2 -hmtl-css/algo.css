@@ -1,0 +1,40 @@
+body{
+    background-image: url(assets/background-algo.jpg);
+    background-attachment: fixed;
+
+    background-size: cover;
+    background-position:center;
+
+
+}
+
+h1 {
+    text-align:end ;
+    color: black;
+    font-family: cursive;
+
+
+
+
+}
+
+p{
+    text-align: initial;
+    font-size: 14px;
+    font-family: fantasy;    
+    color: rgba(21, 22, 20, 0.938);
+
+}
+button {
+    display: block;
+    margin: 27px auto;
+    background-color: blue;
+    border-radius: 8px;
+}
+
+a{
+    display: block;
+    color: aqua;
+    text-decoration: none;
+
+}

@@ -1,0 +1,55 @@
+body {
+    /* background-color: rgba(25, 213, 238, 0.952); */
+    background-image: url(assets/background-algo.jpg);
+    /* fixa a imagem mesmo com zoom. */
+
+
+
+    background-attachment: fixed;
+
+    /* a imagem cobre toda a pagina, mantem a proporçao  */
+    background-size: cover;
+
+    /* centraliza a imagem */
+    background-position: center;
+
+
+}
+
+
+h1 {
+    text-align: center;
+    color: blueviolet;
+    font-size: 40px;
+    font-family: GiGi;
+    font-weight: 800;
+
+}
+
+p{
+    text-align:start;
+    color:rgb(217, 236, 236) ;
+    font-size: 18px;
+}
+
+button{
+    display: block;
+    margin: 30px auto;
+    background-color:white;
+    border-radius: 10px;
+}
+
+
+a{
+    display: block;
+    color: blueviolet;
+    text-decoration: solid;
+    margin: 6px;
+    font-family: ;
+}
+
+
+
+
+
+
