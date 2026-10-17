@@ -17,12 +17,12 @@ console.log(`sao diferen? ${idade !== numero}`)
 
 
 
-console.log('\n=or=')
-console.log(`V or V = ${true && true}`)
-console.log(`V or F = ${true && false}`)
-console.log(`F or F = ${false && false}`)
+console.log('\n=and=')
+console.log(`V and V = ${true && true}`)
+console.log(`V and F = ${true && false}`)
+console.log(`F and F = ${false && false}`)
 
-console.log('\n=AND=')
+console.log('\n=OR=')
 console.log(`V or V = ${true || true}`)
 console.log(`V or F = ${true || false}`)
 console.log(`F or F = ${false || false}`)

@@ -20,6 +20,6 @@ switch (opcao) {
         console.log('opçao invalida')
         
         break;
-l
+
 
 }

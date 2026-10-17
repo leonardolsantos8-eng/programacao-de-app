@@ -20,20 +20,20 @@
 //         break;
 // }
 
-let a = 6
-let b = 5
+// let a = 6
+// let b = 5
 
-const somar = (a, b) => a + b
-const multi = (a, b) => a * b
+// const somar = (a, b) => a + b
+// const multi = (a, b) => a * b
 
-let c
+// let c
 
-if (a === b){
-     c = somar(a,b)}
-else{
-     c = multi(a,b)}
+// if (a === b){
+//      c = somar(a,b)}
+// else{
+//      c = multi(a,b)}
 
-console.log(c)
+// console.log(c)
 
 // let a = 5
 // let b = 5
@@ -69,5 +69,42 @@ console.log(c)
 //     console.log(`${d} maior que ${c}`)
 // else
 //     console.log(`são iguais`)
+
+
+// const opcao = 7
+
+// switch (true) {
+//     case opcao === 1 || opcao === 7:
+//         console.log('dia final de semana')
+    
+//         break;
+//     case opcao >1 && opcao<=6:
+//         console.log('dia ultil')
+//         break;
+//     default:
+//         console.log('dia invalido')
+//         break;
+// }
+
+
+// for(let i = 0; i <=30; i++){
+//     if (i>=15 && i<=20 )
+//         console.log(i)
+// }
+
+
+// for(let i =50; i <=60; i+=2){
+//         console.log(i)
+// }
+
+const testar = (a) => a > 0
+const teste = testar(2)
+if (teste === true)
+    console.log(`positivo`)
+else
+    console.log(`negativo`)
+
+
+
 
 
