@@ -1,0 +1,125 @@
+/* reset do navegador */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px;
+    background: linear-gradient(135deg, #fdf2f8, #eef2ff, #ecfeff);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.painel {
+    width: min(700px, 100%);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+}
+
+h1 {
+    text-align: center;
+    color: #4c1d95;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #312e81;
+    font-weight: bold;
+}
+
+input, button {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #c7d2fe;
+    padding: 12px 14px;
+    font-size: 16px;
+}
+
+input {
+    background: #f8faff;
+    margin-bottom: 12px;
+}
+
+button {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+#resultado-aqui {
+    background: #f5f3ff;
+    border: 1px solid #ddd6fe;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 20px 0;
+}
+
+#resultado-aqui h2 {
+    color: #6d28d9;
+    margin-bottom: 10px;
+}
+
+#resultado-aqui p {
+    margin: 6px 0;
+    color: #374151;
+}
+
+.caixa-boba {
+    background: linear-gradient(135deg, #fff7ed, #fdf2f8);
+    border: 2px dashed #f9a8d4;
+    border-radius: 16px;
+    padding: 18px;
+    text-align: center;
+}
+
+.caixa-boba h2 {
+    color: #be185d;
+    margin-bottom: 12px;
+}
+
+#frase-boba {
+    font-size: 18px;
+    color: #5b21b6;
+    margin-bottom: 12px;
+}
+
+.caos-btn {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.tabuada-item {
+    opacity: 0;
+    transform: translateY(18px);
+    color: #374151;
+    margin: 8px 0;
+    padding: 8px 10px;
+    border-left: 3px solid #ec4899;
+    background: rgba(255, 255, 255, 0.5);
+    animation: aparecer 0.8s ease forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
