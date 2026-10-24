@@ -17,6 +17,15 @@ function gerarTabuada() {
     const numeroinput = document.getElementById('numero-input');
     const numero = parseInt(numeroinput.value);
     const resultadoDiv = document.getElementById('resultado-aqui');
+    const btnGerar = document.getElementById('btn-gerar');
+
+    btnGerar.classList.remove('explodindo');
+    void btnGerar.offsetWidth;
+    btnGerar.classList.add('explodindo');
+
+    btnGerar.addEventListener('animationend', () => {
+        btnGerar.classList.remove('explodindo');
+    }, { once: true });
 
     resultadoDiv.innerHTML = '';
 

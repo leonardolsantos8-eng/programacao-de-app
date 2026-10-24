@@ -52,15 +52,138 @@ input {
 }
 
 button {
+    position: relative;
     background: linear-gradient(135deg, #8b5cf6, #ec4899);
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease;
+    overflow: visible;
 }
 
 button:hover {
     transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#btn-gerar {
+    position: relative;
+    overflow: visible;
+}
+
+#btn-gerar::before,
+#btn-gerar::after,
+#btn-gerar .extra-burst {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff7ed 0%, #fbbf24 20%, #f97316 50%, #ef4444 100%);
+    box-shadow: 0 0 18px rgba(251, 146, 60, 0.95), 0 0 28px rgba(239, 68, 68, 0.85);
+    opacity: 0;
+    pointer-events: none;
+    left: 50%;
+    top: 50%;
+}
+
+#btn-gerar.explodindo::before {
+    animation: boom1 0.8s ease-out forwards;
+}
+
+#btn-gerar.explodindo::after {
+    animation: boom2 0.8s ease-out forwards;
+}
+
+#btn-gerar.explodindo {
+    animation: pulseBlast 0.18s ease-in-out 2 alternate;
+}
+
+#btn-gerar.explodindo .extra-burst {
+    animation: boomCenter 0.8s ease-out forwards;
+}
+
+#btn-gerar.explodindo::before {
+    --dx: -220px;
+    --dy: -140px;
+}
+
+#btn-gerar.explodindo::after {
+    --dx: 220px;
+    --dy: 100px;
+}
+
+#btn-gerar .extra-burst {
+    display: block;
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+
+#btn-gerar.explodindo .extra-burst:nth-child(1) { --dx: -120px; --dy: -180px; animation: boomCenter 0.8s ease-out forwards; }
+#btn-gerar.explodindo .extra-burst:nth-child(2) { --dx: 130px; --dy: -170px; animation: boomCenter 0.8s ease-out 0.04s forwards; }
+#btn-gerar.explodindo .extra-burst:nth-child(3) { --dx: -170px; --dy: 30px; animation: boomCenter 0.8s ease-out 0.08s forwards; }
+#btn-gerar.explodindo .extra-burst:nth-child(4) { --dx: 170px; --dy: 25px; animation: boomCenter 0.8s ease-out 0.12s forwards; }
+#btn-gerar.explodindo .extra-burst:nth-child(5) { --dx: -100px; --dy: 150px; animation: boomCenter 0.8s ease-out 0.16s forwards; }
+#btn-gerar.explodindo .extra-burst:nth-child(6) { --dx: 110px; --dy: 150px; animation: boomCenter 0.8s ease-out 0.2s forwards; }
+#btn-gerar.explodindo .extra-burst:nth-child(7) { --dx: 0px; --dy: -220px; animation: boomCenter 0.8s ease-out 0.24s forwards; }
+#btn-gerar.explodindo .extra-burst:nth-child(8) { --dx: 0px; --dy: 220px; animation: boomCenter 0.8s ease-out 0.28s forwards; }
+
+@keyframes boom1 {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.4);
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(3.2);
+    }
+}
+
+@keyframes boom2 {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.4);
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(3.4);
+    }
+}
+
+@keyframes boomCenter {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.4);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(2.7);
+    }
+}
+
+@keyframes pulseBlast {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 12px rgba(251, 146, 60, 0.5);
+    }
+    100% {
+        transform: scale(1.04);
+        box-shadow: 0 0 26px rgba(239, 68, 68, 0.9), 0 0 40px rgba(251, 146, 60, 0.7);
+    }
 }
 
 #resultado-aqui {
