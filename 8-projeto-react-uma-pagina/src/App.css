@@ -1,0 +1,15 @@
+main {
+  width: min(100% - 40px, 1060px);
+  margin: 0 auto;
+  flex: 1;
+  display: grid;
+  align-items: center;
+  padding: 72px 0;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: min(100% - 32px, 1060px);
+    padding: 44px 0;
+  }
+}
