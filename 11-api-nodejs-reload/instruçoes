@@ -1,0 +1,20 @@
+instruçoes para api.
+criar o arquivo 'pack.json'
+
+npm init -y
+
+instalar programas necessario para api
+
+npm i express sequelize mysql2 cors
+
+explica:
+    - express [faz a API]
+    - sequelize [manipula o banco de dados]
+    - mysql2 [conecta e permite acesso ao banco de dados MySQL]
+    - cors [define quem pode ter acesso à API ]
+
+executar o projeto:
+ node index.js
+
+ .gitignore
+ 
