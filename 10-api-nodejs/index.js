@@ -25,14 +25,14 @@ api.use(express.json())
 const port = 3001
 
 // cadastrar um novo cliente.
-api.post('clientes', async (res, req) => {
+api.post('/clientes', async (req, res) => {
     try{
         const {nome, email, telefone} = req.body
         const novoCliente = await Cliente.create({nome, email, telefone })
-        res.statusCode(201).json({mensagem: 'Cliente cadastrado com sucesso!', cliente: novoCliente})
-    } catch (erro){ 
-       res.statusCode(400).json({mensagem: 'Erro ao dastrar o novo cliente.'})
-    }
+        res.status(201).json({ mensagem: 'Cliente cadastrado com sucesso!', cliente: novoCliente })
+    } catch (erro) {
+    res.status(500).json({ mensagem: 'Erro ao cadastrar cliente', erro })
+}
 })
 
 //buscar todos os cliente no banco de dados.
